@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neyima URKESH | Quadrilingual Specialist · Education · Operations · Hospitality</title>
+  <meta name="description" content="Paris-based quadrilingual specialist (Mandarin, English, French, Uyghur) with Master's degree from Université Paris-Saclay. Specialising in bilingual language immersion, cross-border business operations, and high-standard hospitality.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">Neyima<span>.</span> <small class="nav-zh">乃依曼</small></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#competencies">Expertise</a></li>
+      <li><a href="#cases">Experience</a></li>
+      <li><a href="#vault">CV Vault</a></li>
+      <li><a href="#testimonials">Feedback</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:nayimaurkesh@gmail.com" class="nav-email">nayimaurkesh@gmail.com</a></li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO: FULL-SCREEN VIDEO (JUST LIKE ALEENA SHAH'S) -->
+  <section class="hero" id="about">
+    <video id="heroVideo" preload="auto" playsinline>
+      <source src="assets/intro_video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Hero Overlaid Intro Card -->
+    <div class="hero-overlay-card">
+      <div class="hero-badge-pill">
+        <span class="pill-dot"></span>
+        <span>PARIS, FRANCE · QUADRILINGUAL SPECIALIST</span>
+      </div>
+      <h1 class="hero-title">Neyima URKESH</h1>
+      <p class="hero-sub">乃依曼 · 乌尔凯西 · Université Paris-Saclay</p>
+      <p class="hero-pitch">
+        Bridging education, international operations, and high-standard hospitality in <strong>Mandarin, Uyghur, English, and French</strong>.
+      </p>
+      <div class="hero-btn-row">
+        <button class="btn-play-trigger" id="playVideoBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <span>Watch Introduction Video</span>
+        </button>
+        <a href="#vault" class="btn-hero-secondary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download CVs</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Big Center Play Button (When Paused) -->
+    <div id="videoBigPlay" title="Click to Play">
+      <div class="big-play-circle">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="#2C2C2C"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    </div>
+
+    <!-- Video Controls Bar on Hover -->
+    <div class="video-controls" id="videoControls">
+      <button class="v-btn" id="playPauseBtn" aria-label="Play/Pause">
+        <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      </button>
+      
+      <div class="video-progress" id="videoProgress">
+        <div class="video-progress-fill" id="progressFill"></div>
+      </div>
+
+      <span class="v-time" id="vTime">0:00 / 0:48</span>
+
+      <button class="v-btn" id="muteBtn" aria-label="Mute/Unmute">
+        <svg id="soundIcon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        <svg id="muteIcon" viewBox="0 0 24 24" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27l4.01 4.01H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+      </button>
+
+      <button class="v-btn" id="fullscreenBtn" aria-label="Fullscreen">
+        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+      </button>
+    </div>
+
+    <!-- Scroll Hint -->
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT RIBBON SCROLLER -->
+  <div class="ribbon">
+    <div class="ribbon-track">
+      <div class="ribbon-item">QUADRILINGUAL SPECIALIST <span class="sep"></span></div>
+      <div class="ribbon-item">UNIVERSITÉ PARIS-SACLAY MASTER'S <span class="sep"></span></div>
+      <div class="ribbon-item">BILINGUAL LANGUAGE IMMERSION (CHINESE & ENGLISH) <span class="sep"></span></div>
+      <div class="ribbon-item">MONTESSORI PEDAGOGY & PHONICS <span class="sep"></span></div>
+      <div class="ribbon-item">CROSS-BORDER OPERATIONS & TRANSLATION <span class="sep"></span></div>
+      <div class="ribbon-item">HIGH-STANDARD HOSPITALITY & GUEST RELATIONS <span class="sep"></span></div>
+      <div class="ribbon-item">PARIS 16e · NEUILLY-SUR-SEINE · WORLDWIDE REMOTE <span class="sep"></span></div>
+      <div class="ribbon-item">QUADRILINGUAL SPECIALIST <span class="sep"></span></div>
+      <div class="ribbon-item">UNIVERSITÉ PARIS-SACLAY MASTER'S <span class="sep"></span></div>
+      <div class="ribbon-item">BILINGUAL LANGUAGE IMMERSION (CHINESE & ENGLISH) <span class="sep"></span></div>
+    </div>
+  </div>
+
+  <!-- SKILLS SECTION (INTERACTIVE CHIPS WITH HOVER TOOLTIPS) -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <span class="section-label">Core Capabilities</span>
+      <h2 class="section-title">Skills & Proficiencies</h2>
+      <p class="section-desc">
+        Hover over any capability to view specific applications across bilingual teaching, cross-border operations, and hospitality.
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-chip">
+          <span>🇨🇳 Mandarin Chinese (Native)</span>
+          <span class="skill-tip">Native proficiency, standard accent, business & youth training</span>
+        </div>
+        <div class="skill-chip">
+          <span>🌙 Uyghur (Native Tongue)</span>
+          <span class="skill-tip">Maternal language, Central Asian & Turkic cultural connection</span>
+        </div>
+        <div class="skill-chip">
+          <span>🇬🇧 English (Fluent / C1)</span>
+          <span class="skill-tip">Academic C1, fluent business writing, phonics instruction</span>
+        </div>
+        <div class="skill-chip">
+          <span>🇫🇷 French (Operational / B2)</span>
+          <span class="skill-tip">Paris daily life, parent-teacher liaisons, administrative coordination</span>
+        </div>
+        <div class="skill-chip">
+          <span>Active Child Pedagogy (Ages 5–10)</span>
+          <span class="skill-tip">1-on-1 and small group immersion, cognitive development, storytelling</span>
+        </div>
+        <div class="skill-chip">
+          <span>Montessori-Inspired Methods</span>
+          <span class="skill-tip">Sensorial language acquisition, autonomous pacing & respect</span>
+        </div>
+        <div class="skill-chip">
+          <span>Cross-Border EU-Asia Coordination</span>
+          <span class="skill-tip">Cross-cultural project management, supplier & customer support</span>
+        </div>
+        <div class="skill-chip">
+          <span>High-Standard Front Office & PMS</span>
+          <span class="skill-tip">Check-in/out, room inventory, billing, dispute de-escalation</span>
+        </div>
+        <div class="skill-chip">
+          <span>Trilingual Executive Translation</span>
+          <span class="skill-tip">Accurate translation of business decks, contracts, and curricula</span>
+        </div>
+        <div class="skill-chip">
+          <span>Duolingo Active Tools (Lvl 126+)</span>
+          <span class="skill-tip">Gamified habit-building tools applied to daily student practice</span>
+        </div>
+        <div class="skill-chip">
+          <span>Bespoke Parisian Concierge</span>
+          <span class="skill-tip">VIP guest relations, local cultural curation, multilingual liaison</span>
+        </div>
+        <div class="skill-chip">
+          <span>Université Paris-Saclay Master's</span>
+          <span class="skill-tip">Qualitative research, analytical writing, European higher education</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENCIES SECTION (CLEAN GRID LIKE ALEENA SHAH'S) -->
+  <section class="comp-section" id="competencies">
+    <div class="container">
+      <span class="section-label">Core Pillars</span>
+      <h2 class="section-title">Areas of Expertise</h2>
+      <p class="section-desc">
+        A calibrated blend of pedagogical excellence, cross-border business execution, and high-standard guest relations.
+      </p>
+
+      <div class="comp-grid">
+        
+        <!-- Pin 1: Education -->
+        <div class="comp-pin">
+          <div class="comp-pin-art">
+            <svg viewBox="0 0 300 400" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E8E0D6"/>
+                  <stop offset="100%" stop-color="#FAF6F1"/>
+                </linearGradient>
+              </defs>
+              <rect width="300" height="400" fill="url(#g1)"/>
+              <circle cx="230" cy="90" r="80" fill="#8B9D77" opacity="0.18"/>
+              <path d="M-20,120 Q100,60 220,180 T320,140" fill="none" stroke="#D4A574" stroke-width="2.5" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="comp-pin-body">
+            <span class="comp-pin-tag">Pedagogy</span>
+            <h3>Bilingual Language Coaching & Private Tutoring</h3>
+            <p class="comp-pin-sub">
+              Daily immersion in Mandarin & English for children (5-10 yrs) and executives in Paris. Phonics, storytelling, and structured conversational games.
+            </p>
+            <div class="comp-pin-stats">
+              <div>
+                <div class="cp-stat-val">3h/day</div>
+                <div class="cp-stat-label">Daily Immersion</div>
+              </div>
+              <div>
+                <div class="cp-stat-val">5–10</div>
+                <div class="cp-stat-label">Child Age Range</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 2: Operations -->
+        <div class="comp-pin">
+          <div class="comp-pin-art">
+            <svg viewBox="0 0 300 400" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FAF6F1"/>
+                  <stop offset="100%" stop-color="#E8E0D6"/>
+                </linearGradient>
+              </defs>
+              <rect width="300" height="400" fill="url(#g2)"/>
+              <circle cx="80" cy="110" r="70" fill="#D4A574" opacity="0.2"/>
+              <path d="M0,220 Q120,160 240,240 T320,200" fill="none" stroke="#8B9D77" stroke-width="2.5" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="comp-pin-body">
+            <span class="comp-pin-tag">Business</span>
+            <h3>Cross-Border Operations & Business Support</h3>
+            <p class="comp-pin-sub">
+              Connecting European and Asian enterprises via operational coordination, trilingual contract translation, and high-precision executive assistance.
+            </p>
+            <div class="comp-pin-stats">
+              <div>
+                <div class="cp-stat-val">4 Langs</div>
+                <div class="cp-stat-label">Quadrilingual</div>
+              </div>
+              <div>
+                <div class="cp-stat-val">EU-Asia</div>
+                <div class="cp-stat-label">Market Axis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 3: Hospitality -->
+        <div class="comp-pin">
+          <div class="comp-pin-art">
+            <svg viewBox="0 0 300 400" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E8E0D6"/>
+                  <stop offset="100%" stop-color="#FAF6F1"/>
+                </linearGradient>
+              </defs>
+              <rect width="300" height="400" fill="url(#g3)"/>
+              <circle cx="210" cy="140" r="75" fill="#8B9D77" opacity="0.2"/>
+              <path d="M-10,180 Q100,100 230,170 T330,120" fill="none" stroke="#D4A574" stroke-width="2.5" opacity="0.35"/>
+            </svg>
+          </div>
+          <div class="comp-pin-body">
+            <span class="comp-pin-tag">Hospitality</span>
+            <h3>Front Office & Guest Experience Management</h3>
+            <p class="comp-pin-sub">
+              Rigorous check-in/out procedures, PMS reservation audit, room inventory dispatch, and empathetic cross-cultural conflict resolution for international guests.
+            </p>
+            <div class="comp-pin-stats">
+              <div>
+                <div class="cp-stat-val">PMS</div>
+                <div class="cp-stat-label">System Fluent</div>
+              </div>
+              <div>
+                <div class="cp-stat-val">VIP</div>
+                <div class="cp-stat-label">Concierge Care</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 4: Academic Foundation -->
+        <div class="comp-pin">
+          <div class="comp-pin-art">
+            <svg viewBox="0 0 300 400" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FAF6F1"/>
+                  <stop offset="100%" stop-color="#E8E0D6"/>
+                </linearGradient>
+              </defs>
+              <rect width="300" height="400" fill="url(#g4)"/>
+              <circle cx="100" cy="90" r="65" fill="#D4A574" opacity="0.18"/>
+              <path d="M-20,200 Q90,140 210,210 T320,180" fill="none" stroke="#8B9D77" stroke-width="2.5" opacity="0.35"/>
+            </svg>
+          </div>
+          <div class="comp-pin-body">
+            <span class="comp-pin-tag">Credentials</span>
+            <h3>Université Paris-Saclay Master's Graduate</h3>
+            <p class="comp-pin-sub">
+              Rigorous academic foundation in France developing critical analytical capabilities, qualitative methodology, and cross-cultural communication.
+            </p>
+            <div class="comp-pin-stats">
+              <div>
+                <div class="cp-stat-val">Bac+5</div>
+                <div class="cp-stat-label">Master's Level</div>
+              </div>
+              <div>
+                <div class="cp-stat-val">Paris</div>
+                <div class="cp-stat-label">Saclay Campus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK CASES / PRACTICAL EXPERIENCE SECTION (WITH MODAL ON CLICK) -->
+  <section class="projects-section" id="cases">
+    <div class="container">
+      <span class="section-label">Selected Track Record</span>
+      <h2 class="section-title">Case Studies & Key Projects</h2>
+      <p class="section-desc">
+        Click any card to read detailed methodology, daily pedagogical routines, and quantifiable outcomes.
+      </p>
+
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card" data-modal="modal1">
+          <span class="project-tag">Family Tutoring</span>
+          <h3>French Household Immersion (Ages 5–10)</h3>
+          <p class="peek">
+            Daily 3-hour bilingual (Mandarin & English) tutoring for 7-year-old Romy, plus English tutoring for siblings (ages 5 and 10) in Paris.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">15 hrs</div>
+              <div class="stat-label">Weekly Hours</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">100%</div>
+              <div class="stat-label">Parent Trust</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-modal="modal2">
+          <span class="project-tag">Language Academy</span>
+          <h3>École Objectif Bilingue Paris</h3>
+          <p class="peek">
+            Teaching Chinese language courses for French school children. Designing interactive games, character stroke practice, and conversational roleplay.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">2023+</div>
+              <div class="stat-label">Teaching Since</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">Active</div>
+              <div class="stat-label">Methodology</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-modal="modal3">
+          <span class="project-tag">Cross-Border Operations</span>
+          <h3>EU-Asia Business Coordination & Translation</h3>
+          <p class="peek">
+            Facilitating commercial communication between Chinese and European teams. Accurate translation of executive proposals and market research.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">4 Langs</div>
+              <div class="stat-label">Fluency</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">B2B</div>
+              <div class="stat-label">Enterprise</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-modal="modal4">
+          <span class="project-tag">Hospitality</span>
+          <h3>High-Standard Front Office & Concierge</h3>
+          <p class="peek">
+            Front desk operations, check-in/out, PMS room status management, and multilingual concierge support tailored to international travelers in Paris.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-val">PMS</div>
+              <div class="stat-label">Proficiency</div>
+            </div>
+            <div class="stat">
+              <div class="stat-val">24/7</div>
+              <div class="stat-label">Service Mindset</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CV VAULT (DOWNLOAD THE 6 TAILORED 1-PAGE CVS) -->
+  <section class="ebooks-section" id="vault">
+    <div class="container">
+      <span class="section-label">Curated ATS Documents</span>
+      <h2 class="section-title">Official 1-Page Resume Vault</h2>
+      <p class="section-desc">
+        Six purpose-built, rigorously calibrated single-page CVs formatted without phone dependencies, single-line headers, and 100% full-page balance.
+      </p>
+
+      <div class="ebooks-row ebooks-row-portrait">
+        
+        <!-- CV 1 -->
+        <a href="assets/resumes/01_【双语教学专版】乃依曼_求职简历.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art zh">
+              <span class="cv-badge">中文专版</span>
+              <h4>双语教学简历</h4>
+              <p>乃依曼 · 求职专版</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>01. 双语教学与语言培训专版</h4>
+            <span class="ebook-view">
+              <span>下载 PDF (中文)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- CV 2 -->
+        <a href="assets/resumes/02_【Enseignement_Bilingue】Neyima_URKESH_CV.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art fr">
+              <span class="cv-badge">Français</span>
+              <h4>Enseignement Bilingue</h4>
+              <p>Neyima URKESH · CV</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>02. Professeure de Chinois & Anglais</h4>
+            <span class="ebook-view">
+              <span>Télécharger (Français)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- CV 3 -->
+        <a href="assets/resumes/03_【酒店服务与前厅接待】乃依曼_求职简历.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art zh">
+              <span class="cv-badge">中文专版</span>
+              <h4>酒店前厅接待简历</h4>
+              <p>乃依曼 · 求职专版</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>03. 酒店服务与前厅接待专版</h4>
+            <span class="ebook-view">
+              <span>下载 PDF (中文)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- CV 4 -->
+        <a href="assets/resumes/04_【Hotellerie_Accueil】Neyima_URKESH_CV.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art fr">
+              <span class="cv-badge">Français</span>
+              <h4>Hôtellerie & Accueil</h4>
+              <p>Neyima URKESH · CV</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>04. Réceptionniste & Relations Clients</h4>
+            <span class="ebook-view">
+              <span>Télécharger (Français)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- CV 5 -->
+        <a href="assets/resumes/05_【国际商务与出海运营】乃依曼_求职简历.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art zh">
+              <span class="cv-badge">中文专版</span>
+              <h4>国际商务出海简历</h4>
+              <p>乃依曼 · 求职专版</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>05. 国际商务与出海运营专版</h4>
+            <span class="ebook-view">
+              <span>下载 PDF (中文)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- CV 6 -->
+        <a href="assets/resumes/06_【Business_Operations】Neyima_URKESH_CV.pdf" download class="ebook-card">
+          <div class="ebook-cover">
+            <div class="cv-preview-art en">
+              <span class="cv-badge">English</span>
+              <h4>Business Operations</h4>
+              <p>Neyima URKESH · CV</p>
+            </div>
+          </div>
+          <div class="ebook-info">
+            <h4>06. Cross-Border Operations Specialist</h4>
+            <span class="ebook-view">
+              <span>Download (English)</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (LIKE ALEENA SHAH'S SECTION) -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <span class="section-label">Endorsements & Feedback</span>
+      <h2 class="section-title">What Families & Partners Say</h2>
+      <p class="section-desc">
+        Real feedback from French parents and collaborative organizations in Paris.
+      </p>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <div class="testimonial-quote">“</div>
+          <p class="testimonial-text">
+            Neyima brings incredible gentleness, patience, and pedagogical clarity into our home. Our 7-year-old daughter Romy looks forward to her Chinese and English sessions every single weekday. Her progress in oral expression has been remarkable.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar-fallback">SM</div>
+            <div>
+              <div class="testimonial-name">Sophie M.</div>
+              <div class="testimonial-role">Parent in Paris 16e (Mother of Romy, 7 yo)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">“</div>
+          <p class="testimonial-text">
+            A reliable and structured bilingual educator. Neyima's ability to seamlessly transition between French, English, and Mandarin creates a natural immersion atmosphere that keeps children deeply engaged without fatigue.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar-fallback">OB</div>
+            <div>
+              <div class="testimonial-name">Academic Coordinator</div>
+              <div class="testimonial-role">École de Chinois Objectif Bilingue Paris</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-quote">“</div>
+          <p class="testimonial-text">
+            Neyima's quadrilingual background and Paris-Saclay Master's training give her an exceptional edge in cross-cultural coordination. Her communication is always precise, diplomatic, and executive-ready.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar-fallback">JL</div>
+            <div>
+              <div class="testimonial-name">Jean-Luc D.</div>
+              <div class="testimonial-role">Cross-Border Business Consultant, Paris</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION (CHARCOAL AESTHETIC LIKE ALEENA SHAH'S) -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Let’s Start a Conversation</h2>
+      <p class="section-desc">
+        Whether you are a French family seeking an experienced bilingual tutor in Paris, or an enterprise looking for a quadrilingual coordinator, reach out directly.
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:nayimaurkesh@gmail.com" class="contact-link primary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>nayimaurkesh@gmail.com</span>
+        </a>
+
+        <a href="tel:+33759505609" class="contact-link secondary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>+33 7 59 50 56 09</span>
+        </a>
+
+        <a href="https://www.linkedin.com/services/page/14171b312563709024/admin/" target="_blank" rel="noopener" class="contact-link secondary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.67-.75 1.67-1.67s-.75-1.67-1.67-1.67-1.67.75-1.67 1.67.75 1.67 1.67 1.67m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          <span>LinkedIn Services Page</span>
+        </a>
+      </div>
+
+      <!-- Quick Message Form -->
+      <form class="contact-mini-form" id="contactMiniForm">
+        <div class="cmf-row">
+          <input type="text" id="senderName" placeholder="Your Name or Family / Company" required>
+          <input type="text" id="senderContact" placeholder="Your Email or Phone" required>
+        </div>
+        <textarea id="senderMsg" rows="3" placeholder="Describe your inquiry (e.g., Bilingual tutoring schedule in Paris, cross-border project, or hospitality role)..."></textarea>
+        <button type="submit" class="btn-cmf-submit">Send Direct Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MODAL FOR DETAILED CASES -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContainer">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
